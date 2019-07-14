@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { render } from 'react-dom';
 import Button from './components/Form/Button';
+import TextInput from './components/Form/TextInput';
 
 function App(): JSX.Element {
-  const list = ['oi', 'ok'];
+  const list = ['oi', '2', 'lady', 'jose hmm', 'legal', 'topezera'];
+  const [value, setValue] = useState('rodrigo');
+
+  const handleChange = useCallback((text): void => {
+    setValue(text);
+  }, []);
+
   return (
     <div>
-      test
-      <Button
-        fasdfa={10}
-        fasdfasdaf={111}
-        name1="ok"
-        name2="ok"
-        name3="10"
-        teste="ok"
-      >
-        ok<div>ok</div>ok
+      <Button name1="ok" name2={100} name3="10">
+        <div>ok</div>
         <div>ok</div>
       </Button>
+      <TextInput onChange={handleChange} value={value} />
       <ul>
         {list.map(
           (item): JSX.Element => {

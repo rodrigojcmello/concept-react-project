@@ -66,10 +66,7 @@ module.exports = (env = { NODE_ENV: '' }) => {
     );
   } else {
     config.devServer = { historyApiFallback: true };
-    config.externals = {
-      react: 'React',
-      'react-dom': 'ReactDOM'
-    };
+    config.externals = { react: 'React', 'react-dom': 'ReactDOM' };
     config.plugins.push(
       new HtmlWebpackPlugin({ template: './index-dev.html' })
     );

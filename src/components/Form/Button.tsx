@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 interface ButtonProps {
-  name1: number;
-  name2: string;
+  name1: string;
+  name2: number;
   name3: string;
 }
 
-export const Button = styled.div<ButtonProps>`
+const Button = styled.div<ButtonProps>`
   background-color: red;
 `;
 

@@ -3,39 +3,38 @@ module.exports = {
     browser: true,
     es6: true
   },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   extends: [
-    'airbnb',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-    'prettier/react',
-    'prettier/@typescript-eslint'
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "prettier/@typescript-eslint"
   ],
-  plugins: ['@typescript-eslint', 'prettier', 'react', 'only-warn'],
+  plugins: ["@typescript-eslint", "prettier", "react", "only-warn"],
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true
     }
   },
   rules: {
-    'react/jsx-filename-extension': 0,
-    'react/jsx-sort-props': 1,
-    'prettier/prettier': [1, { singleQuote: true }]
+    "react/jsx-filename-extension": 0,
+    "prettier/prettier": [1, { singleQuote: true }]
   },
   settings: {
     react: {
-      version: 'detect'
+      version: "detect"
     },
-    'import/resolver': {
+    "import/resolver": {
       node: {
-        extensions: ['.ts', '.tsx']
+        extensions: [".ts", ".tsx"]
       }
     }
   },
   globals: {
-    PROD: 'readonly'
+    PROD: "readonly"
   }
 };
