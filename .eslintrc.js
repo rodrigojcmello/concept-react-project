@@ -6,5 +6,8 @@ module.exports = {
   plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2018
+  },
+  rules: {
+    'prettier/prettier': [1, { singleQuote: true }]
   }
 };

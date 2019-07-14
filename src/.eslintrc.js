@@ -6,12 +6,13 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'prettier/react',
     'prettier/@typescript-eslint'
   ],
-  plugins: ['@typescript-eslint', 'prettier', 'react'],
+  plugins: ['@typescript-eslint', 'prettier', 'react', 'only-warn'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -20,11 +21,13 @@ module.exports = {
     }
   },
   rules: {
-    'react/jsx-filename-extension': 0
+    'react/jsx-filename-extension': 0,
+    'react/jsx-sort-props': 1,
+    'prettier/prettier': [1, { singleQuote: true }]
   },
   settings: {
     react: {
-      version: 'latest'
+      version: 'detect'
     },
     'import/resolver': {
       node: {
