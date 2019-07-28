@@ -21,7 +21,8 @@ module.exports = {
     }
   },
   rules: {
-    "react/jsx-filename-extension": 0,
+    "max-lines": 1, // default 300 lines
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "prettier/prettier": [1, { singleQuote: true }]
   },
   settings: {
