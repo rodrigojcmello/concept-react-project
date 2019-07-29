@@ -1,31 +1,31 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import Button from './components/Form/Button';
-import TextInput from './components/Form/TextInput';
+import { BrowserRouter as Router } from 'react-router-dom';
+import GlobalStyle from './assets/styled-components/GlobalStyle';
+import Routes from './routes/Route';
+import { ModalProvider } from './store/modal/context';
+import modalReducer from './store/modal/reducer';
+import { ThemeModeProvider } from './store/theme/context';
+import themeReducer from './store/theme/reducer';
+import { Theme } from './store/theme/types';
+
+const initialTheme: Theme = window.matchMedia('(prefers-color-scheme: dark)')
+  .matches
+  ? 'dark'
+  : 'light';
 
 function App(): JSX.Element {
-  const list = ['oi', '2', 'lady', 'jose hmm', 'legal', 'top'];
-  const [value, setValue] = useState('rodrigo');
-
-  const handleChange = useCallback((text): void => {
-    setValue(text);
-  }, []);
-
   return (
-    <div>
-      <Button name1="ok" name2={111} name3="10">
-        <div>ok</div>
-        <div>ok</div>
-      </Button>
-      <TextInput onChange={handleChange} value={value} />
-      <ul>
-        {list.map(
-          (item): JSX.Element => {
-            return <li key={item}>{item}</li>;
-          }
-        )}
-      </ul>
-    </div>
+    <ThemeModeProvider initialState={initialTheme} reducer={themeReducer}>
+      <ModalProvider initialState={[]} reducer={modalReducer}>
+        <>
+          <Router>
+            <Routes />
+          </Router>
+          <GlobalStyle />
+        </>
+      </ModalProvider>
+    </ThemeModeProvider>
   );
 }
 
