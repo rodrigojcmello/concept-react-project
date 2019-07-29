@@ -40,10 +40,11 @@ function Routes(): JSX.Element {
     location,
     (l: H.Location): string => l.pathname,
     {
+      unique: true,
       from: {
         opacity: 0,
         transform: window.firstAnimationScreen
-          ? 'translate3d(30%,0,0)'
+          ? 'translate3d(50%,0,0)'
           : 'translate3d(0%,0,0)',
         zIndex: 0
       },
@@ -55,7 +56,7 @@ function Routes(): JSX.Element {
       leave: {
         opacity: 0,
         transform: window.firstAnimationScreen
-          ? 'translate3d(-20%,0,0)'
+          ? 'translate3d(-25%,0,0)'
           : 'translate3d(0%,0,0)',
         zIndex: 0
       }
@@ -65,17 +66,15 @@ function Routes(): JSX.Element {
   return (
     <Route
       render={(): JSX.Element => (
-        <>
-          <ScreenContainer>
-            {transitions.map(
-              ({ item, props, key }): JSX.Element => (
-                <ScreenAnimated key={key} style={props}>
-                  <Switch location={item}>{renderRoutes(routes)}</Switch>
-                </ScreenAnimated>
-              )
-            )}
-          </ScreenContainer>
-        </>
+        <ScreenContainer>
+          {transitions.map(
+            ({ item, props, key }): JSX.Element => (
+              <ScreenAnimated key={key} style={props}>
+                <Switch location={item}>{renderRoutes(routes)}</Switch>
+              </ScreenAnimated>
+            )
+          )}
+        </ScreenContainer>
       )}
     />
   );

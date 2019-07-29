@@ -40,6 +40,20 @@ module.exports = (env = { NODE_ENV: '' }) => {
           ],
           include: [path.resolve(__dirname, 'src')],
           exclude: [/node_modules/]
+        },
+        {
+          test: /\.(s)?css$/,
+          use: [
+            'style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                plugins: () => [require('precss'), require('tailwindcss')]
+              }
+            }
+          ]
         }
       ]
     },
