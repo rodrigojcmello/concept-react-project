@@ -22,7 +22,7 @@ function App(): JSX.Element {
           <Router>
             <Routes />
           </Router>
-          <GlobalStyle />
+          {/* <GlobalStyle /> */}
         </>
       </ModalProvider>
     </ThemeModeProvider>
