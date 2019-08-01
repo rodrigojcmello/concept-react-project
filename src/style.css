@@ -1,0 +1,13 @@
+/*noinspection CssInvalidAtRule*/
+@tailwind base;
+/*noinspection CssInvalidAtRule*/
+@tailwind components;
+/*noinspection CssInvalidAtRule*/
+@tailwind utilities;
+
+body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
