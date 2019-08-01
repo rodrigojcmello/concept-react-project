@@ -31,7 +31,9 @@ function Screen4(): JSX.Element {
         </ul>
         <div>
           content
-          <Square blue>OK</Square>
+          <Square blue2={false} teste="ok">
+            OK
+          </Square>
         </div>
       </div>
     </Screen>
