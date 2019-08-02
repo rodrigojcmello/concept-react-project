@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Screen } from '../../components/Layout';
 import './style.css';
-import { Square } from './style';
+import { Square, Button } from './style';
 
 function Screen4(): JSX.Element {
   return (
@@ -31,9 +31,9 @@ function Screen4(): JSX.Element {
         </ul>
         <div>
           content
-          <Square blue2={false} teste="ok">
-            OK
-          </Square>
+          <Square blue={false}>OK!!!</Square>
+          <Button onClick={(): void => {}} />
+          <button type="button">ok</button>
         </div>
       </div>
     </Screen>

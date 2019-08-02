@@ -1,15 +1,29 @@
-import React from 'react';
+import React, {
+  FunctionComponent,
+  ReactComponentElement,
+  ReactElement
+} from 'react';
 
 interface CSSProps {
   children?: JSX.Element | JSX.Element[] | string;
 }
 
-function css<T>(Element: keyof JSX.IntrinsicElements): any {
+export const Button: FunctionComponent = (): ReactComponentElement<
+  'button'
+> => <button type="button">ok</button>;
+
+function css<T>(
+  Element: keyof JSX.IntrinsicElements
+): (
+  styles: (props: T) => string[]
+) => (p: T) => ReactComponentElement<'button', T> {
   console.log('1');
-  return (styles: (props: T) => string[]): ((p: T) => void) => {
+  return (
+    styles: (props: T) => string[]
+  ): ((p: T) => ReactComponentElement<'button', T>) => {
     console.log('styles--', styles);
     // styles();
-    return function CSS(p: CSSProps & T): JSX.Element {
+    return function CSS(p: CSSProps & T): ReactComponentElement<'button', T> {
       console.log('p', p);
       // console.log('q', styles()(p));
       console.log('q', styles(p));
@@ -19,7 +33,7 @@ function css<T>(Element: keyof JSX.IntrinsicElements): any {
   };
 }
 
-interface SquareProps {
+interface SquareProps extends CSSProps {
   blue?: boolean;
 }
 
