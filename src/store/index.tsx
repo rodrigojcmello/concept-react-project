@@ -3,7 +3,7 @@ import modalReducer from './modal/reducer';
 import { ModalProvider } from './modal/context';
 
 interface ProviderProps {
-  children: JSX.Element[];
+  children: JSX.Element[] | JSX.Element;
 }
 
 function Provider({ children }: ProviderProps): JSX.Element {

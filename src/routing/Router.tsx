@@ -4,7 +4,7 @@ import { animated, useTransition } from 'react-spring';
 import { __RouterContext } from 'react-router';
 import * as H from 'history';
 import { renderRoutes } from 'react-router-config';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import routes from './routes';
 
 const ScreenContainer = styled.div`
