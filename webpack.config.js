@@ -33,27 +33,13 @@ module.exports = (env = { NODE_ENV: '' }) => {
                   '@babel/preset-react',
                   '@babel/preset-typescript'
                 ],
-                plugins: ['babel-plugin-styled-components'],
+                plugins: ['babel-plugin-emotion'],
                 cacheDirectory: true
               }
             }
           ],
           include: [path.resolve(__dirname, 'src')],
           exclude: [/node_modules/]
-        },
-        {
-          test: /\.(s)?css$/,
-          use: [
-            'style-loader',
-            { loader: 'css-loader', options: { importLoaders: 1 } },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: () => [require('precss'), require('tailwindcss')]
-              }
-            }
-          ]
         }
       ]
     },
@@ -79,6 +65,7 @@ module.exports = (env = { NODE_ENV: '' }) => {
       new HtmlWebpackPlugin({ template: './index-prod.html' })
     );
   } else {
+    config.devtool = 'eval-source-map';
     config.devServer = { historyApiFallback: true };
     config.externals = { react: 'React', 'react-dom': 'ReactDOM' };
     config.plugins.push(

@@ -1,11 +1,10 @@
 import React, { memo } from 'react';
 import { Screen } from '../../components/Layout';
-import './style.css';
 import { Square, Button } from './style';
 
 function Screen4(): JSX.Element {
   return (
-    <Screen color="purple">
+    <Screen>
       <div className="main">
         <ul className="border-r border-gray-100">
           <li>

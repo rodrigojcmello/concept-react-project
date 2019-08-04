@@ -1,11 +1,12 @@
-/* eslint-disable import/prefer-default-export */
-import styled from '../../../assets/styled-components';
+import styled from '@emotion/styled';
 
-export const ScreenContainer = styled.div<{ color?: string }>`
+const ScreenContainer = styled.div`
   height: 100vh;
   width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
-  //background-color: ${({ color }): string => color || 'blueviolet'};
+  background-color: var(--contrast0);
 `;
+
+export default ScreenContainer;

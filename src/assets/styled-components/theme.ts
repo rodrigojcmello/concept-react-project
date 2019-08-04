@@ -1,99 +1,55 @@
 export default {
-  colors: {
-    primary: {
-      bg: '#2196f3', // 95%
-      text: '#229af5' // 96%
-    },
-    secondary: {},
-    contrast: {
-      0: {
-        text: '#ffffff', // 100%
-        bg: '#ffffff' // 100%
-      },
-      1: {
-        text: '#ebebeb', // 92%
-        bg: '#EFEFEF' // 93%
-      },
-      2: {
-        text: '#cccccc', // 80%
-        bg: '#d0d0d0' // 81%
-      },
-      3: {
-        text: '#8c8c8c', // 55% brightness
-        bg: '#a6a6a6' // 65% brightness
-      },
-      4: {
-        text: '#808080', // 50% brightness
-        bg: '#808080' // 50% brightness
-      },
-      5: {
-        text: '#4a4a4a', // 29% brightness
-        bg: '#4d4d4d' // 30% brightness
-      }
-    },
-    success: {
-      text: '#9C27B0',
-      bg: '#ca60dc'
-    },
-    warning: {
-      text: '#9C27B0', // 69%
-      bg: '#ca60dc' // 86%
-    },
-    danger: {
-      text: '#9C27B0',
-      bg: '#ca60dc'
-    }
-  },
-  sizes: {
-    mobile: 425,
-    borderRadius: {
-      small: 4
-    },
-    input: 32
-  },
-  animation: {
-    duration: {
-      1: 0.2,
-      2: 0.3,
-      3: 2
-    }
-  },
-  font: {
-    family: {
-      primary: 'Roboto, sans-serif'
-    },
-    size: {
-      small: 12,
-      medium: 14,
-      large: 20,
-      larger: 24
-    },
-    lineHeight: {
-      small: 16,
-      medium: 18,
-      large: 22,
-      larger: 26
-    }
-  },
+  family:
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
 
-  /* Cores */
-  azul1: '#2196F3',
-  azul2: '#d4e7f7',
-  azulClaro1: 'red',
-  cor1: '#318C7A',
-  cor1Claro: '#deedea',
-  cor2: '#ACD049',
-  cor2Claro: '#edf5d6',
+  textXS: '.75rem', //    12px
+  textSM: '.875rem', //   14px
+  textMD: '1rem', //      16px
+  textLG: '1.125rem', //  18px
+  textXL: '1.25rem', //   20px
+  textXL2: '1.5rem', //   24px
+  textXL3: '1.875rem', // 30px
+  textXL4: '2.25rem', //  36px
+  textXL5: '3rem', //     48px
+  textXL6: '4rem', //     64px
 
-  preto1: '#4D4D4D', // 30% brilho
-  preto2: '#a6a6a6', // 65% brilho
+  spacing0: 0,
+  spacing1: '0.25rem', // 4px
+  spacing2: '0.5rem', //  8px
+  spacing3: '0.75rem', // 12px
+  spacing4: '1rem', //    16px
+  spacing5: '1.25rem', // 20px
+  spacing6: '1.5rem', //  24px
+  spacing7: '2rem', //    32px
+  spacing8: '2.5rem', //  40px
+  spacing9: '3rem', //    48px
+  spacing10: '3.5rem', // 56px
+  spacing11: '4rem', //   64px
+  spacing12: '5rem', //   80px
+  spacing13: '6rem', //   96px
+  spacing14: '7rem', //   112px
+  spacing15: '8rem', //   128px
+  spacing16: '9rem', //   144px
+  spacing17: '10rem', //  160px
+  spacing18: '11rem', //  176px
+  spacing19: '12rem', //  192px
+  spacing20: '13rem', //  208px
+  spacing21: '14rem', //  224px
+  spacing22: '15rem', //  240px
 
-  preto3: '#ebebeb', // 92% brilho
-  preto4: '#EFEFEF', // 93% brilho
+  breakpointSM: '425px',
+  breakpointMD: '768px',
+  breakpointLG: '1024px',
+  breakpointXL: '1280px',
+  breakpointXL2: '1440px',
 
-  /* Medidas */
-  larguraMobile: 425,
-
-  /* Outros */
-  fonte1: 'Roboto, sans-serif'
+  shadow0: '0 0 0 1px rgba(0, 0, 0, 0.1)',
+  shadow1: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+  shadow2:
+    '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+  shadow3:
+    '0 10px 15px -3px  rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+  shadow4:
+    '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+  shadow5: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
 };

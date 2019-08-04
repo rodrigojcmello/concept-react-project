@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { animated, useTransition } from 'react-spring';
 import { __RouterContext } from 'react-router';
 import * as H from 'history';
 import { renderRoutes } from 'react-router-config';
+import styled from 'styled-components';
 import routes from './routes';
-import styled from '../assets/styled-components';
 
 const ScreenContainer = styled.div`
   position: relative;
@@ -80,4 +80,12 @@ function Routes(): JSX.Element {
   );
 }
 
-export default Routes;
+function Router(): JSX.Element {
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  );
+}
+
+export default Router;
