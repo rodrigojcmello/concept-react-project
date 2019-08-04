@@ -13,12 +13,8 @@ function Screen3(): JSX.Element {
   }, []);
 
   return (
-    <Screen color="purple">
+    <Screen>
       <Link to="/screen-1">Screen 1</Link>
-      <Button name1="ok" name2={111} name3="10">
-        <div>ok</div>
-        <div>ok</div>
-      </Button>
       <TextInput onChange={handleChange} value={value} />
       <ul>
         {list.map(
@@ -27,6 +23,9 @@ function Screen3(): JSX.Element {
           }
         )}
       </ul>
+      <Button name1="ok" name2={111} name3="10">
+        Send
+      </Button>
     </Screen>
   );
 }

@@ -20,12 +20,12 @@ const routes: RouteConfig[] = [
     component: Screen3,
     path: '/screen-3',
     key: 'screen3'
-  },
-  {
-    component: Screen4,
-    path: '/screen-4',
-    key: 'screen3'
   }
+  // {
+  //   component: Screen4,
+  //   path: '/screen-4',
+  //   key: 'screen3'
+  // }
 ];
 
 export default routes;

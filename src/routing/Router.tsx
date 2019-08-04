@@ -7,11 +7,6 @@ import { renderRoutes } from 'react-router-config';
 import styled from '@emotion/styled';
 import routes from './routes';
 
-const ScreenContainer = styled.div`
-  position: relative;
-  width: 100vw;
-`;
-
 const ScreenAnimated = styled(animated.div)`
   left: 0;
   position: absolute;
@@ -66,7 +61,7 @@ function Routes(): JSX.Element {
   return (
     <Route
       render={(): JSX.Element => (
-        <ScreenContainer>
+        <>
           {transitions.map(
             ({ item, props, key }): JSX.Element => (
               <ScreenAnimated key={key} style={props}>
@@ -74,7 +69,7 @@ function Routes(): JSX.Element {
               </ScreenAnimated>
             )
           )}
-        </ScreenContainer>
+        </>
       )}
     />
   );

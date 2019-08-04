@@ -1,4 +1,4 @@
-export default {
+const theme = {
   family:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
 
@@ -43,6 +43,10 @@ export default {
   breakpointXL: '1280px',
   breakpointXL2: '1440px',
 
+  radiusSM: '.125rem', // 2px
+  radiusMD: '.25rem', //  4px
+  radiusLG: '0.5rem', //  8px
+
   shadow0: '0 0 0 1px rgba(0, 0, 0, 0.1)',
   shadow1: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
   shadow2:
@@ -53,3 +57,5 @@ export default {
     '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
   shadow5: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
 };
+
+export default theme;

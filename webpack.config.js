@@ -8,6 +8,7 @@ module.exports = (env = { NODE_ENV: '' }) => {
   const config = {
     mode: 'development',
     entry: './src/App.tsx',
+    watch: true,
     output: {
       filename: '[name].[chunkhash].js',
       path: path.resolve(__dirname, './dist')
