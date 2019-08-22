@@ -1,6 +1,8 @@
 import React from 'react';
-import modalReducer from './modal/reducer';
 import { ModalProvider } from './modal/context';
+import modalReducer from './modal/reducer';
+import { ItemProvider } from './item/context';
+import itemReducer from './item/reducer';
 
 interface ProviderProps {
   children: JSX.Element[] | JSX.Element;
@@ -8,9 +10,11 @@ interface ProviderProps {
 
 function Provider({ children }: ProviderProps): JSX.Element {
   return (
-    <ModalProvider initialState={[]} reducer={modalReducer}>
-      <>{children}</>
-    </ModalProvider>
+    <ItemProvider initialState={[]} reducer={itemReducer}>
+      <ModalProvider initialState={[]} reducer={modalReducer}>
+        <>{children}</>
+      </ModalProvider>
+    </ItemProvider>
   );
 }
 

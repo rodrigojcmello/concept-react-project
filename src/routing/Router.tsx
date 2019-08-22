@@ -6,6 +6,8 @@ import * as H from 'history';
 import { renderRoutes } from 'react-router-config';
 import styled from '@emotion/styled';
 import routes from './routes';
+import { initFirestore } from '../store/firestore';
+import { useItemValue } from '../store/item/context';
 
 const ScreenAnimated = styled(animated.div)`
   left: 0;
@@ -76,6 +78,13 @@ function Routes(): JSX.Element {
 }
 
 function Router(): JSX.Element {
+  const [item, setItem] = useItemValue();
+
+  useEffect((): void => {
+    console.log('entrou 1x');
+    initFirestore(setItem);
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes />

@@ -9,6 +9,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
+    "firebase": "^6.4.0",
     "history": "^4.9.0",
     "local-storage": "latest",
     "react": "^16.8.6",
@@ -55,6 +56,6 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --port=3000"
   }
 }

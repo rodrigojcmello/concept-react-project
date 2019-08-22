@@ -12,7 +12,7 @@ const Button = styled.button<ButtonProps>`
   padding: ${theme.spacing2} ${theme.spacing6};
   border: 1px solid var(--primary600);
   border-radius: ${theme.radiusMD};
-  color: var(--contrast0);
+  color: var(--contrast500);
 `;
 
 export default Button;
