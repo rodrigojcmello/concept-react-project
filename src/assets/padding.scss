@@ -1,0 +1,21 @@
+@for $i from 0 through 10 {
+  .p-#{$i} {
+    padding: var(--spacing#{$i});
+  }
+
+  .pt-#{$i} {
+    padding-top: var(--spacing#{$i});
+  }
+
+  .pb-#{$i} {
+    padding-bottom: var(--spacing#{$i});
+  }
+
+  .pr-#{$i} {
+    padding-right: var(--spacing#{$i});
+  }
+
+  .pl-#{$i} {
+    padding-left: var(--spacing#{$i});
+  }
+}

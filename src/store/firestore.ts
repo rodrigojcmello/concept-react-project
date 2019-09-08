@@ -9,10 +9,6 @@ firebase.initializeApp({
   projectId: 'e-list-a8a7c'
 });
 
-// export function iniciarFirebase() {
-//   iniciarFirestore();
-// }
-
 interface Item {
   title: string;
   done: boolean;
@@ -22,11 +18,10 @@ let db: firebase.firestore.Firestore;
 
 export const dbItem = {
   add: (item: Item): void => {
-    db.collection('poc')
+    db.collection('poc/test/ok')
       .add(item)
       .then((): void => {
         // dispatch(item);
-        console.log('new item has been added');
       })
       .catch();
   },
@@ -53,8 +48,8 @@ export const dbItem = {
   //   lote.commit().then();
   // },
 
-  sync: (setItem: Dispatch<ItemAction>): void => {
-    db.collection('poc').onSnapshot(({ docs }): void => {
+  synchronize: (setItem: Dispatch<ItemAction>): void => {
+    db.collection('poc/test/ok').onSnapshot(({ docs }): void => {
       const items: Item[] = [];
       docs.forEach((doc): void => {
         items.push(doc.data() as Item);
@@ -63,18 +58,16 @@ export const dbItem = {
         type: 'SET_ITEMS',
         items
       });
-      console.log('items has been sync');
     });
   }
 };
 
-export function initFirestore(setItem: Dispatch<ItemAction>): void {
+export function initializeFirestore(setItem: Dispatch<ItemAction>): void {
   db = firebase.firestore();
-  db.enablePersistence()
+  db.enablePersistence({ synchronizeTabs: true })
     .then((): void => {
-      dbItem.sync(setItem);
+      console.log('sync init');
+      dbItem.synchronize(setItem);
     })
-    .catch((): void => {
-      // TODO: fazer componente de alerta
-    });
+    .catch((): void => {});
 }

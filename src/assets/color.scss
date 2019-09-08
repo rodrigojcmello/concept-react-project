@@ -1,0 +1,39 @@
+@for $i from 0 through 10 {
+  .bg-contrast#{$i * 100} {
+    background-color: var(--contrast#{$i * 100});
+  }
+
+  .color-contrast#{$i * 100} {
+    color: var(--contrast#{$i * 100});
+  }
+
+  .border-contrast#{$i * 100} {
+    border-color: var(--contrast#{$i * 100});
+  }
+}
+
+@for $i from 1 through 9 {
+  .bg-primary#{$i * 100} {
+    background-color: var(--primary#{$i * 100});
+  }
+
+  .bg-secondary#{$i * 100} {
+    background-color: var(--secondary#{$i * 100});
+  }
+
+  .bg-success#{$i * 100} {
+    background-color: var(--success#{$i * 100});
+  }
+
+  .bg-warning#{$i * 100} {
+    background-color: var(--warning#{$i * 100});
+  }
+
+  .bg-danger#{$i * 100} {
+    background-color: var(--danger#{$i * 100});
+  }
+
+  .color-primary#{$i * 100} {
+    background-color: var(--blue#{$i * 100});
+  }
+}

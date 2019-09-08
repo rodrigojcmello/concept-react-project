@@ -6,11 +6,10 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   extends: [
     "airbnb",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "prettier/react",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
   ],
   plugins: ["@typescript-eslint", "prettier", "react", "only-warn"],
   parserOptions: {
@@ -21,7 +20,7 @@ module.exports = {
     }
   },
   rules: {
-    "max-lines": 1, // default 300 lines
+    "max-lines": 1,
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "prettier/prettier": [1, { singleQuote: true }]
   },
@@ -34,8 +33,5 @@ module.exports = {
         extensions: [".ts", ".tsx"]
       }
     }
-  },
-  globals: {
-    PROD: "readonly"
   }
 };

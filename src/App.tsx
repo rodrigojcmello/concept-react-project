@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Router from './routing/Router';
 import Providers from './store';
-import './style.css';
+import './assets/style.scss';
 
 function App(): JSX.Element {
   return (

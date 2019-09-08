@@ -6,7 +6,7 @@ import * as H from 'history';
 import { renderRoutes } from 'react-router-config';
 import styled from '@emotion/styled';
 import routes from './routes';
-import { initFirestore } from '../store/firestore';
+import { initializeFirestore } from '../store/firestore';
 import { useItemValue } from '../store/item/context';
 
 const ScreenAnimated = styled(animated.div)`
@@ -82,7 +82,7 @@ function Router(): JSX.Element {
 
   useEffect((): void => {
     console.log('entrou 1x');
-    initFirestore(setItem);
+    initializeFirestore(setItem);
   }, []);
 
   return (

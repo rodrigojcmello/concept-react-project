@@ -2,16 +2,23 @@
   <dictionary name="rodrigo">
     <words>
       <w>antialiased</w>
+      <w>blue#</w>
       <w>chunkhash</w>
+      <w>contrast#</w>
+      <w>danger#</w>
       <w>eljx</w>
       <w>firebaseapp</w>
       <w>msapplication</w>
       <w>neue</w>
       <w>noto</w>
+      <w>primary#</w>
       <w>roboto</w>
+      <w>secondary#</w>
       <w>segoe</w>
       <w>semibold</w>
+      <w>success#</w>
       <w>uniqid</w>
+      <w>warning#</w>
       <w>ywxao</w>
     </words>
   </dictionary>

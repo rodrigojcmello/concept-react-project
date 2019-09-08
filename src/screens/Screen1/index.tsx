@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Screen } from '../../components/Layout';
 import { dbItem } from '../../store/firestore';
 import { useItemValue } from '../../store/item/context';
+import Button from '../../components/Form/Button';
+import { button1 } from '../../components/Form/Button/schemas';
 
 function Screen1(): JSX.Element {
   const [items] = useItemValue();
@@ -30,14 +32,15 @@ function Screen1(): JSX.Element {
     <Screen>
       <Link to="/screen-3">Screen 3</Link>
       <h1>ok</h1>
-      <ul>
-        {items.map((item, i) => {
-          return <li key={i}>{item.title}</li>;
-        })}
-      </ul>
+      {/* <ul> */}
+      {/*  {items.map((item, i) => { */}
+      {/*    return <li key={i}>{item.title}</li>; */}
+      {/*  })} */}
+      {/* </ul> */}
       <form onSubmit={handleSubmit}>
         <input value={title} onChange={handleChange} />
       </form>
+      <Button text="first text" css={button1} />
     </Screen>
   );
 }
