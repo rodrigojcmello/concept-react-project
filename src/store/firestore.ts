@@ -4,9 +4,9 @@ import { Dispatch } from 'react';
 import { ItemAction } from './item/types';
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyA9ZNoBZItUqs-OTuAbYEljxE6htOYwxao',
-  authDomain: 'e-list-a8a7c.firebaseapp.com',
-  projectId: 'e-list-a8a7c'
+  apiKey: '',
+  authDomain: '',
+  projectId: ''
 });
 
 interface Item {
